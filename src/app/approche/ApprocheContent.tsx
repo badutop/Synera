@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Stepper } from "@/components/ui/Stepper";
@@ -14,9 +16,16 @@ export function ApprocheContent() {
 
   return (
     <>
-      <section className="bg-ink-50 py-20 dark:bg-ink-800/20 sm:py-28">
+      <section className="bg-ink-50 py-14 dark:bg-ink-800/20 sm:py-20">
         <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <Reveal>
+            <Link
+              href="/"
+              className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" />
+              {content.common.backToHome}
+            </Link>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
               {t.hero.eyebrow}
             </p>

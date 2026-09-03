@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, Target, Telescope } from "lucide-react";
+import Link from "next/link";
+import { ArrowLeft, MapPin, Target, Telescope } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -14,13 +15,19 @@ export function IdentiteContent() {
   const { content } = useLanguage();
   const t = content.identite;
 
-  const geoLocations = [content.contact.hq, content.contact.branch];
 
   return (
     <>
-      <section className="bg-ink-50 py-20 dark:bg-ink-800/20 sm:py-28">
+      <section className="bg-ink-50 py-14 dark:bg-ink-800/20 sm:py-20">
         <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <Reveal>
+            <Link
+              href="/"
+              className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" />
+              {content.common.backToHome}
+            </Link>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
               {t.hero.eyebrow}
             </p>
@@ -87,25 +94,20 @@ export function IdentiteContent() {
           title={t.geo.title}
           description={t.geo.description}
         />
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {geoLocations.map((location, i) => (
-            <Reveal key={location.city} delay={i * 0.1}>
-              <div className="flex items-start gap-4 rounded-2xl border border-ink-900/8 p-6 dark:border-white/10">
-                <MapPin className="mt-1 h-6 w-6 shrink-0 text-primary" />
-                <div>
-                  <h3 className="font-display text-lg font-semibold text-ink-900 dark:text-white">
-                    {location.city}
-                  </h3>
-                  <p className="text-sm text-ink-400 dark:text-ink-100/70">
-                    {location.role}
-                  </p>
-                  <p className="mt-1 text-xs italic text-ink-400/70 dark:text-ink-100/40">
-                    {t.geo.addressPending}
-                  </p>
-                </div>
+        <div className="mt-12 max-w-md">
+          <Reveal>
+            <div className="flex items-start gap-4 rounded-2xl border border-ink-900/8 p-6 dark:border-white/10">
+              <MapPin className="mt-1 h-6 w-6 shrink-0 text-primary" />
+              <div>
+                <h3 className="font-display text-lg font-semibold text-ink-900 dark:text-white">
+                  {content.contact.hq.address}
+                </h3>
+                <p className="text-sm text-ink-400 dark:text-ink-100/70">
+                  {content.contact.hq.role}
+                </p>
               </div>
-            </Reveal>
-          ))}
+            </div>
+          </Reveal>
         </div>
       </Section>
 

@@ -10,6 +10,7 @@ const nextConfig = {
   // sibling directories (other projects) contain their own lockfiles.
   outputFileTracingRoot: __dirname,
   images: {
+    qualities: [75, 100],
     remotePatterns: [
       {
         protocol: "https",

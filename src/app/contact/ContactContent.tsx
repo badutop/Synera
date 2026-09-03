@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Clock, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { ArrowLeft, Clock, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ContactForm } from "@/components/forms/ContactForm";
@@ -13,9 +14,16 @@ export function ContactContent({ defaultSubject }: { defaultSubject?: string }) 
 
   return (
     <>
-      <section className="bg-ink-50 py-20 dark:bg-ink-800/20 sm:py-28">
+      <section className="bg-ink-50 py-14 dark:bg-ink-800/20 sm:py-20">
         <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <Reveal>
+            <Link
+              href="/"
+              className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" />
+              {content.common.backToHome}
+            </Link>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
               {t.hero.eyebrow}
             </p>
@@ -46,19 +54,8 @@ export function ContactContent({ defaultSubject }: { defaultSubject?: string }) 
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div className="text-sm">
-                  <p className="font-medium text-ink-900 dark:text-white">{t.hq.city}</p>
-                  <p className="text-ink-400 dark:text-ink-100/60">
-                    {t.hq.role} — {t.addressPending}
-                  </p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <div className="text-sm">
-                  <p className="font-medium text-ink-900 dark:text-white">{t.branch.city}</p>
-                  <p className="text-ink-400 dark:text-ink-100/60">
-                    {t.branch.role} — {t.addressPending}
-                  </p>
+                  <p className="font-medium text-ink-900 dark:text-white">{t.hq.address}</p>
+                  <p className="text-ink-400 dark:text-ink-100/60">{t.hq.role}</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -73,10 +70,10 @@ export function ContactContent({ defaultSubject }: { defaultSubject?: string }) 
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <a
-                  href="tel:+33100000000"
+                  href="tel:+221777770000"
                   className="text-sm font-medium text-ink-900 hover:text-primary dark:text-white"
                 >
-                  +33 1 00 00 00 00 <span className="text-ink-400">{t.phonePending}</span>
+                  {t.phone}
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -94,7 +91,7 @@ export function ContactContent({ defaultSubject }: { defaultSubject?: string }) 
             <div className="mt-10 aspect-video w-full overflow-hidden rounded-2xl border border-ink-900/8 dark:border-white/10">
               <iframe
                 title={t.mapTitle}
-                src="https://www.openstreetmap.org/export/embed.html?bbox=2.2241%2C48.8156%2C2.4699%2C48.9022&layer=mapnik&marker=48.8566%2C2.3522"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-17.5200%2C14.6600%2C-17.4100%2C14.7500&layer=mapnik&marker=14.7247%2C-17.4676"
                 className="h-full w-full grayscale"
                 loading="lazy"
               />

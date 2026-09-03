@@ -19,7 +19,7 @@ export function Section({
 }: SectionProps) {
   const Tag = as;
   return (
-    <Tag id={id} className={cn("py-20 sm:py-28", className)}>
+    <Tag id={id} className={cn("py-12 sm:py-16", className)}>
       <Container className={containerClassName}>{children}</Container>
     </Tag>
   );

@@ -34,13 +34,17 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-20 w-full max-w-content items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="shrink-0" aria-label="SYNERA Group — Accueil">
-          <Logo size="md" />
+        <Link
+          href="/"
+          className="-ml-1 shrink-0 sm:-ml-2"
+          aria-label="SYNERA Group — Accueil"
+        >
+          <Logo size="lg" />
         </Link>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6">
           <nav
-            className="hidden items-center gap-1 lg:flex"
+            className="hidden items-center gap-0.5 xl:flex"
             aria-label="Navigation principale"
           >
             {content.nav.links.map((link) => {
@@ -51,10 +55,10 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
+                    "whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold transition-colors",
                     active
-                      ? "text-primary"
-                      : "text-ink-700 hover:text-primary dark:text-ink-100/80 dark:hover:text-primary-300"
+                      ? "bg-primary text-white shadow-soft"
+                      : "font-medium text-ink-700 hover:bg-primary-50 hover:text-primary dark:text-ink-100/80 dark:hover:bg-primary-500/10 dark:hover:text-primary-300"
                   )}
                 >
                   {link.label}
@@ -63,11 +67,11 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden items-center gap-2 xl:flex">
             <LanguageToggle />
             <ThemeToggle />
           </div>
-          <div className="flex items-center gap-1 lg:hidden">
+          <div className="flex items-center gap-1 xl:hidden">
             <ThemeToggle />
             <button
               type="button"

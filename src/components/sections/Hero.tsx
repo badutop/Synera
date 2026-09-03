@@ -18,7 +18,7 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-gradient-brand opacity-20 blur-3xl"
       />
-      <Container className="relative grid grid-cols-1 items-center gap-14 py-20 sm:py-28 lg:grid-cols-2 lg:py-32">
+      <Container className="relative grid grid-cols-1 items-center gap-14 py-14 sm:py-20 lg:grid-cols-2 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,12 +51,13 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-soft">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
+              src="/images/accueil.jpeg"
               alt={t.imageAlt}
               fill
               priority
+              quality={100}
               className="object-cover"
               sizes="(min-width: 1024px) 40vw, 90vw"
             />

@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
 
@@ -39,7 +40,7 @@ export function MobileMenu({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-ink-900/40 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-50 bg-ink-900/40 backdrop-blur-sm xl:hidden"
           onClick={onClose}
         >
           <motion.div
@@ -66,15 +67,24 @@ export function MobileMenu({
             </div>
 
             <nav className="mt-10 flex flex-col gap-1" aria-label="Navigation principale">
-              {content.nav.links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-lg px-3 py-3 font-display text-xl font-semibold text-ink-900 transition-colors hover:bg-primary-50 hover:text-primary dark:text-white dark:hover:bg-white/5"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {content.nav.links.map((link) => {
+                const active =
+                  link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "rounded-lg px-3 py-3 font-display text-xl font-semibold transition-colors",
+                      active
+                        ? "bg-primary text-white"
+                        : "text-ink-900 hover:bg-primary-50 hover:text-primary dark:text-white dark:hover:bg-white/5"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="mt-auto pt-8">

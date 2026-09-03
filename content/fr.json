@@ -8,7 +8,6 @@
   },
   "nav": {
     "links": [
-      { "label": "Accueil", "href": "/" },
       { "label": "Notre Identité", "href": "/identite" },
       { "label": "Nos Solutions", "href": "/solutions" },
       { "label": "Notre Approche", "href": "/approche" },
@@ -36,13 +35,14 @@
       { "label": "Mentions légales", "href": "#" },
       { "label": "Politique de confidentialité", "href": "#" }
     ],
-    "hqLine": "Paris, France (siège — adresse à confirmer)",
-    "phonePending": "+33 1 00 00 00 00 (à confirmer)"
+    "hqLine": "6, Cité COMICO - VDN, Dakar, Sénégal (siège social)",
+    "phone": "+221 77 777 00 00"
   },
   "common": {
     "readMore": "Lire l'article",
     "discoverMore": "En savoir plus",
     "backToBlog": "Retour aux actualités",
+    "backToHome": "Retour à l'accueil",
     "sendMessage": "Envoyer le message",
     "sending": "Envoi en cours…",
     "requiredField": "Ce champ est requis",
@@ -69,7 +69,8 @@
       "eyebrow": "Nos solutions",
       "title": "Quatre pôles, une seule ambition : votre réussite",
       "description": "De la mise en relation à l'exécution, nous couvrons chaque étape de votre développement sur un nouveau marché.",
-      "linkLabel": "En savoir plus"
+      "linkLabel": "En savoir plus",
+      "viewAll": "Voir toutes nos solutions"
     },
     "valueProp": {
       "eyebrow": "Pourquoi SYNERA Group",
@@ -114,8 +115,7 @@
     "geo": {
       "eyebrow": "Présence géographique",
       "title": "Ancrés localement, connectés globalement",
-      "description": "Nos implantations nous permettent de rester au plus près des écosystèmes que nous connectons.",
-      "addressPending": "Adresse précise à confirmer"
+      "description": "Notre siège nous permet de rester au plus près de l'écosystème que nous connectons."
     },
     "team": {
       "eyebrow": "Équipe dirigeante",
@@ -184,10 +184,8 @@
       "description": "Décrivez-nous votre besoin : nos équipes reviennent vers vous sous 48h pour un premier échange sans engagement.",
       "imageAlt": "Équipe SYNERA Group à l'écoute de ses clients"
     },
-    "hq": { "city": "Paris, France", "role": "Siège social" },
-    "branch": { "city": "Abidjan, Côte d'Ivoire", "role": "Bureau régional" },
-    "addressPending": "adresse précise à confirmer",
-    "phonePending": "(à confirmer)",
+    "hq": { "address": "6, Cité COMICO - VDN, Dakar, Sénégal", "role": "Siège social" },
+    "phone": "+221 77 777 00 00",
     "hoursLabel": "Lun – Ven, 9h00 – 18h00",
     "linkedinLabel": "LinkedIn SYNERA Group",
     "linkedinPending": "(lien à venir)",

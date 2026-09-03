@@ -8,7 +8,6 @@
   },
   "nav": {
     "links": [
-      { "label": "Home", "href": "/" },
       { "label": "Our Identity", "href": "/identite" },
       { "label": "Our Solutions", "href": "/solutions" },
       { "label": "Our Approach", "href": "/approche" },
@@ -36,13 +35,14 @@
       { "label": "Legal notice", "href": "#" },
       { "label": "Privacy policy", "href": "#" }
     ],
-    "hqLine": "Paris, France (head office — address to be confirmed)",
-    "phonePending": "+33 1 00 00 00 00 (to be confirmed)"
+    "hqLine": "6, Cité COMICO - VDN, Dakar, Senegal (head office)",
+    "phone": "+221 77 777 00 00"
   },
   "common": {
     "readMore": "Read article",
     "discoverMore": "Learn more",
     "backToBlog": "Back to insights",
+    "backToHome": "Back to home",
     "sendMessage": "Send message",
     "sending": "Sending…",
     "requiredField": "This field is required",
@@ -69,7 +69,8 @@
       "eyebrow": "Our solutions",
       "title": "Four areas of expertise, one ambition: your success",
       "description": "From introductions to execution, we cover every stage of your growth in a new market.",
-      "linkLabel": "Learn more"
+      "linkLabel": "Learn more",
+      "viewAll": "See all our solutions"
     },
     "valueProp": {
       "eyebrow": "Why SYNERA Group",
@@ -114,8 +115,7 @@
     "geo": {
       "eyebrow": "Geographic presence",
       "title": "Locally rooted, globally connected",
-      "description": "Our locations keep us close to the ecosystems we connect.",
-      "addressPending": "Exact address to be confirmed"
+      "description": "Our head office keeps us close to the ecosystem we connect."
     },
     "team": {
       "eyebrow": "Leadership team",
@@ -184,10 +184,8 @@
       "description": "Tell us about your needs: our teams get back to you within 48h for a first, no-obligation conversation.",
       "imageAlt": "SYNERA Group team listening to clients"
     },
-    "hq": { "city": "Paris, France", "role": "Head office" },
-    "branch": { "city": "Abidjan, Côte d'Ivoire", "role": "Regional office" },
-    "addressPending": "exact address to be confirmed",
-    "phonePending": "(to be confirmed)",
+    "hq": { "address": "6, Cité COMICO - VDN, Dakar, Senegal", "role": "Head office" },
+    "phone": "+221 77 777 00 00",
     "hoursLabel": "Mon – Fri, 9:00am – 6:00pm",
     "linkedinLabel": "SYNERA Group on LinkedIn",
     "linkedinPending": "(link coming soon)",

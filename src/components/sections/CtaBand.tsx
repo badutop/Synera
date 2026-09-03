@@ -10,7 +10,7 @@ export function CtaBand() {
   const t = content.home.cta;
 
   return (
-    <section className="py-20 sm:py-24">
+    <section className="py-12 sm:py-16">
       <Container>
         <div className="relative overflow-hidden rounded-3xl bg-gradient-brand px-8 py-14 text-center sm:px-16 sm:py-20">
           <div
