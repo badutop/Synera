@@ -54,7 +54,7 @@ Modifie les valeurs hexadécimales dans ce fichier : elles se propagent automati
 - **Logo** : le site n'affiche pas les fichiers JPEG fournis directement (ils ont un fond blanc plein, ce qui pose problème en mode sombre). Le header/footer utilisent un composant `src/components/ui/Logo.tsx` qui recrée le wordmark "SYNERA | Group" en texte/SVG stylé, basé sur la disposition horizontale du logo. **Dès que tu as un fichier vectoriel (SVG) ou PNG transparent officiel**, remplace le contenu de ce composant par un `<Image src="/logo/synera.svg" ... />` — les fichiers sources sont conservés dans `public/logo/` pour référence.
 - **Favicon** : généré dynamiquement dans `src/app/icon.tsx` (un "S" violet sur fond plein). Remplace ce fichier par une icône statique (`public/favicon.ico`) si tu préfères utiliser le vrai logo une fois vectorisé.
 - **Photos** : toutes les images utilisent des placeholders Unsplash réalistes via `next/image` (domaine autorisé dans `next.config.mjs`). Remplace les URLs `https://images.unsplash.com/...` par tes propres visuels (idéalement dans `public/images/` puis import local) au fur et à mesure que tu les obtiens.
-- **Logos partenaires** : la section "Ils nous font confiance" sur la page d'accueil (`src/components/sections/PartnersMarquee.tsx`) affiche des cases vides numérotées en attendant de vrais logos clients.
+- **Logos partenaires** : la section "Ils nous font confiance" sur la page d'accueil (`src/components/sections/PartnersMarquee.tsx`) affiche les logos de COMSEC, SpinTech, SmarTek, Sierra Logistics et Water Ô, stockés dans `public/images/partners/`. Modifie le tableau `partners` en tête du fichier pour ajouter, retirer ou remplacer un logo.
 
 ## Brancher le formulaire de contact à un vrai service d'envoi
 
@@ -97,12 +97,10 @@ Le projet est prêt pour un déploiement **Vercel** (zéro configuration) ou un 
 Avant mise en ligne, voici ce qu'il reste à me fournir ou confirmer :
 
 1. **Logo vectoriel** (SVG de préférence, sinon PNG haute résolution avec fond transparent) — pour remplacer le wordmark recréé en CSS/SVG.
-2. **Adresses exactes** des implantations (actuellement "Paris, France" et "Abidjan, Côte d'Ivoire" en placeholders — à confirmer ou remplacer).
-3. **Coordonnées réelles** : téléphone, email définitif si différent de `contact@synera-group.com`.
-4. **Chiffres clés réels** (années d'expérience, nombre de projets accompagnés, secteurs, marchés) — actuellement des valeurs illustratives dans `src/data/stats.ts`.
-5. **Équipe dirigeante** : noms, postes définitifs et photos (actuellement des placeholders "Prénom Nom" avec initiales).
-6. **Logos partenaires/clients** pour la section "Ils nous font confiance".
-7. **Témoignages clients** pour la page Secteurs & Références.
-8. **Comptes réseaux sociaux** à lier (LinkedIn actuellement en lien `#`).
-9. **Photos professionnelles réelles** pour remplacer les visuels Unsplash.
-10. **Relecture de la traduction anglaise** par un locuteur natif si le site doit servir un public anglophone officiellement (traduction complète livrée, mais non relue par un professionnel).
+2. **Email de contact définitif** si différent de `contact@synera-group.com`.
+3. **Chiffres clés réels** (années d'expérience, nombre de projets accompagnés, secteurs, marchés) — actuellement des valeurs illustratives dans `src/data/stats.ts`.
+4. **Équipe dirigeante** : noms, postes définitifs et photos (actuellement des placeholders "Prénom Nom" avec initiales).
+5. **Témoignages clients** pour la page Secteurs & Références.
+6. **Comptes réseaux sociaux** à lier (LinkedIn actuellement en lien `#`).
+7. **Photos professionnelles réelles** pour remplacer les visuels Unsplash.
+8. **Relecture de la traduction anglaise** par un locuteur natif si le site doit servir un public anglophone officiellement (traduction complète livrée, mais non relue par un professionnel).
