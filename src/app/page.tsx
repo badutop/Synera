@@ -17,12 +17,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsBand />
       <PolesOverview />
       <ValueProp />
       <PartnersMarquee />
       <BlogPreview />
       <CtaBand />
+      <StatsBand />
     </>
   );
 }
