@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { LineChart, Cpu, Megaphone, Rocket, GraduationCap } from "lucide-react";
+import { LineChart, Cpu, Sun, Pickaxe, Rocket, GraduationCap } from "lucide-react";
 import type { Locale } from "@/components/providers/LanguageProvider";
 
 export interface Sector {
@@ -22,10 +22,10 @@ const sectorsFr: Sector[] = [
       "Études de marché et intermédiation pour les acteurs technologiques en phase d'expansion internationale.",
   },
   {
-    icon: Megaphone,
-    title: "Marketing & Communication",
+    icon: Sun,
+    title: "Énergie Solaire",
     description:
-      "Diagnostics de positionnement et mise en relation avec des partenaires de communication locaux.",
+      "Mise en relation avec des développeurs et investisseurs de projets solaires, étude des cadres réglementaires locaux.",
   },
   {
     icon: Rocket,
@@ -38,6 +38,12 @@ const sectorsFr: Sector[] = [
     title: "Formation",
     description:
       "Programmes de développement des compétences et accompagnement de la mobilité professionnelle.",
+  },
+  {
+    icon: Pickaxe,
+    title: "Mines & Géologie",
+    description:
+      "Intermédiation auprès d'acteurs miniers et institutionnels, appui aux études de faisabilité de projets d'exploration.",
   },
 ];
 
@@ -55,10 +61,10 @@ const sectorsEn: Sector[] = [
       "Market studies and intermediation for technology players expanding internationally.",
   },
   {
-    icon: Megaphone,
-    title: "Marketing & Communication",
+    icon: Sun,
+    title: "Solar Energy",
     description:
-      "Positioning diagnostics and introductions to local communication partners.",
+      "Introductions to solar project developers and investors, and analysis of local regulatory frameworks.",
   },
   {
     icon: Rocket,
@@ -71,6 +77,12 @@ const sectorsEn: Sector[] = [
     title: "Training",
     description:
       "Skills development programs and support for professional mobility.",
+  },
+  {
+    icon: Pickaxe,
+    title: "Mining & Geology",
+    description:
+      "Intermediation with mining and institutional players, and support for exploration project feasibility studies.",
   },
 ];
 
