@@ -1,0 +1,210 @@
+{
+  "locale": "en",
+  "meta": {
+    "siteName": "SYNERA Group",
+    "baseline": "Together, for a better future",
+    "defaultTitle": "SYNERA Group | Business intermediation, studies and project support",
+    "defaultDescription": "SYNERA Group connects companies, investors and institutions with the right partners, de-risks decisions through rigorous studies, and manages projects end to end."
+  },
+  "nav": {
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Our Identity", "href": "/identite" },
+      { "label": "Our Solutions", "href": "/solutions" },
+      { "label": "Our Approach", "href": "/approche" },
+      { "label": "Sectors & References", "href": "/secteurs" },
+      { "label": "Insights", "href": "/actualites" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "cta": "Let's talk about your project"
+  },
+  "footer": {
+    "description": "SYNERA Group is a business intermediation, research and project support firm connecting companies, investors and institutions with the right markets.",
+    "columns": {
+      "navigation": "Navigation",
+      "solutions": "Our Solutions",
+      "contact": "Contact"
+    },
+    "newsletter": {
+      "title": "Stay informed",
+      "description": "Get our market insights and news, at most once a month.",
+      "placeholder": "Your email address",
+      "cta": "Subscribe"
+    },
+    "legal": "All rights reserved.",
+    "legalLinks": [
+      { "label": "Legal notice", "href": "#" },
+      { "label": "Privacy policy", "href": "#" }
+    ],
+    "hqLine": "Paris, France (head office — address to be confirmed)",
+    "phonePending": "+33 1 00 00 00 00 (to be confirmed)"
+  },
+  "common": {
+    "readMore": "Read article",
+    "discoverMore": "Learn more",
+    "backToBlog": "Back to insights",
+    "sendMessage": "Send message",
+    "sending": "Sending…",
+    "requiredField": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "nameTooShort": "Please enter your full name.",
+    "subjectRequired": "Please select a subject.",
+    "messageTooShort": "Your message must contain at least 20 characters.",
+    "success": "Message sent. Our team will get back to you within 48h.",
+    "error": "Something went wrong. Please try again or email us directly."
+  },
+  "home": {
+    "hero": {
+      "badge": "Business Intermediation & Project Support",
+      "titleLine": "The link between your ambitions and",
+      "titleHighlight": "new markets",
+      "description": "SYNERA Group connects companies, investors and institutions with the right partners, de-risks every decision through rigorous studies, and manages your projects end to end.",
+      "ctaPrimary": "Let's talk about your project",
+      "ctaSecondary": "Discover our solutions",
+      "imageAlt": "Business meeting between international partners",
+      "statCardValue": "4",
+      "statCardLabel": "areas of expertise serving your projects"
+    },
+    "poles": {
+      "eyebrow": "Our solutions",
+      "title": "Four areas of expertise, one ambition: your success",
+      "description": "From introductions to execution, we cover every stage of your growth in a new market.",
+      "linkLabel": "Learn more"
+    },
+    "valueProp": {
+      "eyebrow": "Why SYNERA Group",
+      "title": "A method, not just a contact book",
+      "description": "Our value isn't limited to our network: it lies in the rigor of our studies and our long-term commitment."
+    },
+    "partners": {
+      "title": "Trusted by"
+    },
+    "blogPreview": {
+      "eyebrow": "Insights",
+      "title": "Our latest articles",
+      "description": "Market analysis, methodology and group news.",
+      "viewAll": "All insights"
+    },
+    "cta": {
+      "title": "Ready to explore new markets?",
+      "description": "Let's talk about your project: our teams get back to you within 48h for a first, no-obligation conversation.",
+      "button": "Let's talk about your project"
+    }
+  },
+  "identite": {
+    "hero": {
+      "eyebrow": "Our identity",
+      "title": "A link, not just an intermediary.",
+      "paragraph": "SYNERA Group was born from a simple observation: the best international growth opportunities rarely fail for lack of ambition, but for lack of a fine-grained understanding of local ecosystems. We built the group to close that gap — with a network of qualified contacts, cross-sector expertise, and a methodological rigor that de-risks every stage of your projects.",
+      "imageAlt": "SYNERA Group team in a work meeting"
+    },
+    "mission": {
+      "title": "Our mission",
+      "text": "To facilitate trade, investment and skills transfer between the partners SYNERA Group connects, by de-risking every step with rigorous studies and end-to-end project support."
+    },
+    "vision": {
+      "title": "Our vision",
+      "text": "To become the reference in intermediation and high-impact project support, by creating durable, mutually beneficial synergies between the players we connect."
+    },
+    "valuesSection": {
+      "eyebrow": "Our values",
+      "title": "What guides every decision we make",
+      "description": "Four principles that shape how we work, project after project."
+    },
+    "geo": {
+      "eyebrow": "Geographic presence",
+      "title": "Locally rooted, globally connected",
+      "description": "Our locations keep us close to the ecosystems we connect.",
+      "addressPending": "Exact address to be confirmed"
+    },
+    "team": {
+      "eyebrow": "Leadership team",
+      "title": "The people behind SYNERA Group",
+      "description": "A team with complementary expertise, united by the same commitment to results."
+    }
+  },
+  "solutions": {
+    "hero": {
+      "eyebrow": "Our solutions",
+      "title": "Four areas of expertise, one consistent approach.",
+      "description": "Whether you need a single area of expertise or full end-to-end support, every solution is designed to work with the others and de-risk your trajectory.",
+      "imageAlt": "Working session around a growth strategy"
+    },
+    "methodologyLabel": "Our methodology",
+    "ctaLabel": "Discuss this need",
+    "sectorsSection": {
+      "eyebrow": "Cross-sector expertise",
+      "title": "Expertise that spans sectors",
+      "linkLabel": "Discover our sectors & references →"
+    }
+  },
+  "approche": {
+    "hero": {
+      "eyebrow": "Our approach",
+      "title": "A proven methodology, in five steps.",
+      "description": "Every project we support follows the same thread: understand before acting, study before deciding, and measure before concluding.",
+      "imageAlt": "Working session around a whiteboard"
+    },
+    "engagement": {
+      "eyebrow": "Our commitment",
+      "title": "Transparent support, at every stage",
+      "description": "You always know where your project stands: shared milestones, regular check-ins, and a single point of contact responsible for overall consistency."
+    }
+  },
+  "secteurs": {
+    "hero": {
+      "eyebrow": "Sectors & References",
+      "title": "Cross-sector expertise, grounded in the concrete.",
+      "description": "Our teams operate across varied sectors, with the same methodological rigor and the same focus on results.",
+      "imageAlt": "Cross-disciplinary team meeting"
+    },
+    "references": {
+      "eyebrow": "References",
+      "title": "Projects, and results",
+      "description": "An illustrative overview of our work — detailed references and client testimonials will be published as our collaborations progress."
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What our partners say",
+      "placeholder": "Client testimonial coming soon — this space will be filled in as soon as a partner agrees to share their feedback."
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Insights",
+      "title": "Analysis, methodology and group news.",
+      "imageAlt": "Writing an article on a laptop"
+    },
+    "readingTimeSuffix": "read"
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your project.",
+      "description": "Tell us about your needs: our teams get back to you within 48h for a first, no-obligation conversation.",
+      "imageAlt": "SYNERA Group team listening to clients"
+    },
+    "hq": { "city": "Paris, France", "role": "Head office" },
+    "branch": { "city": "Abidjan, Côte d'Ivoire", "role": "Regional office" },
+    "addressPending": "exact address to be confirmed",
+    "phonePending": "(to be confirmed)",
+    "hoursLabel": "Mon – Fri, 9:00am – 6:00pm",
+    "linkedinLabel": "SYNERA Group on LinkedIn",
+    "linkedinPending": "(link coming soon)",
+    "mapTitle": "SYNERA Group location (placeholder — to be updated)",
+    "form": {
+      "nameLabel": "Full name",
+      "namePlaceholder": "Jean Dupont",
+      "emailLabel": "Work email",
+      "emailPlaceholder": "jean.dupont@company.com",
+      "companyLabel": "Company",
+      "companyOptional": "(optional)",
+      "companyPlaceholder": "Your company name",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjectOther": "Other request",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your project in a few lines…"
+    }
+  }
+}
