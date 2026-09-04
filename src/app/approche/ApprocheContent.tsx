@@ -38,7 +38,7 @@ export function ApprocheContent() {
           </Reveal>
           <Reveal delay={0.15} className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1581091877018-dac6a371d50f?auto=format&fit=crop&w=1200&q=80"
+              src="/images/approche.jpeg"
               alt={t.hero.imageAlt}
               fill
               className="object-cover"

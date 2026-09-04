@@ -40,7 +40,7 @@ export function IdentiteContent() {
           </Reveal>
           <Reveal delay={0.15} className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+              src="/images/identite.jpeg"
               alt={t.hero.imageAlt}
               fill
               className="object-cover"
