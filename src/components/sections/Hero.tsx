@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Globe2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Badge } from "@/components/ui/Badge";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export function Hero() {
@@ -24,10 +23,6 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Badge className="mb-6">
-            <Globe2 className="mr-1.5 h-3.5 w-3.5" />
-            {t.badge}
-          </Badge>
           <h1 className="font-display text-4xl font-bold leading-[1.1] text-ink-900 text-balance dark:text-white sm:text-5xl lg:text-6xl">
             {t.titleLine} <span className="text-primary">{t.titleHighlight}</span>.
           </h1>
