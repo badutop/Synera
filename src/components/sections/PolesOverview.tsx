@@ -7,6 +7,7 @@ import { poles } from "@/data/solutions";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { cn } from "@/lib/utils";
 
 const poleImages: Record<string, string> = {
   intermediation:
@@ -17,6 +18,20 @@ const poleImages: Record<string, string> = {
     "https://images.unsplash.com/photo-1604783125462-37d81c7385e6?auto=format&fit=crop&w=800&q=80",
   "competences-rh":
     "https://images.unsplash.com/photo-1653565685060-e15e492a7fda?auto=format&fit=crop&w=800&q=80",
+};
+
+// Recadrage : conserve la partie basse (sujets) des 3 premières photos, et la
+// partie haute (le formateur, en pied) pour la dernière.
+const poleImagePosition: Record<string, string> = {
+  intermediation: "object-bottom",
+  "etudes-conseil": "object-bottom",
+  "accompagnement-projets": "object-bottom",
+  "competences-rh": "object-top",
+};
+
+// Libellé raccourci pour tenir sur une seule ligne dans la tuile.
+const poleTileLabel: Record<string, string> = {
+  "competences-rh": "Développement des Compétences",
 };
 
 export function PolesOverview() {
@@ -41,13 +56,16 @@ export function PolesOverview() {
           <Reveal key={pole.slug} delay={i * 0.06}>
             <Link
               href={`/solutions#${pole.slug}`}
-              className="group relative flex aspect-square w-full flex-col justify-end overflow-hidden rounded-2xl shadow-card transition-shadow duration-300 hover:shadow-soft"
+              className="group relative flex aspect-[3/2] w-full flex-col justify-end overflow-hidden rounded-2xl shadow-card transition-shadow duration-300 hover:shadow-soft"
             >
               <Image
                 src={poleImages[pole.slug]}
                 alt={pole.shortTitle}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className={cn(
+                  "object-cover transition-transform duration-500 group-hover:scale-105",
+                  poleImagePosition[pole.slug]
+                )}
                 sizes="(min-width: 640px) 22vw, 45vw"
               />
               <div
@@ -58,8 +76,13 @@ export function PolesOverview() {
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/15 text-white backdrop-blur-sm">
                   <pole.icon className="h-3.5 w-3.5" />
                 </div>
-                <span className="font-display text-xs font-semibold leading-snug text-white sm:text-sm">
-                  {pole.shortTitle}
+                <span
+                  className={cn(
+                    "font-display text-xs font-semibold leading-snug text-white sm:text-sm",
+                    poleTileLabel[pole.slug] && "whitespace-nowrap"
+                  )}
+                >
+                  {poleTileLabel[pole.slug] ?? pole.shortTitle}
                 </span>
               </div>
             </Link>
