@@ -31,6 +31,7 @@
       "cta": "Subscribe"
     },
     "legal": "All rights reserved.",
+    "builtBy": "Built by",
     "legalLinks": [
       { "label": "Legal notice", "href": "#" },
       { "label": "Privacy policy", "href": "#" }

@@ -31,6 +31,7 @@
       "cta": "S'inscrire"
     },
     "legal": "Tous droits réservés.",
+    "builtBy": "Réalisé par",
     "legalLinks": [
       { "label": "Mentions légales", "href": "#" },
       { "label": "Politique de confidentialité", "href": "#" }

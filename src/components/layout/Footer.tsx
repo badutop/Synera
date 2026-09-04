@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Logo } from "@/components/ui/Logo";
@@ -127,8 +128,20 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-ink-900/8 pt-8 text-xs text-ink-400 dark:border-white/10 dark:text-ink-100/60 sm:flex-row">
-          <p>
-            © {year} SYNERA Group. {content.footer.legal}
+          <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 sm:justify-start">
+            <span>
+              © {year} SYNERA Group. {content.footer.legal}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              {content.footer.builtBy}
+              <Image
+                src="/images/partners/smartek.png"
+                alt="SmarTek"
+                width={1191}
+                height={360}
+                className="h-4 w-auto object-contain"
+              />
+            </span>
           </p>
           <div className="flex items-center gap-5">
             {content.footer.legalLinks.map((link) => (
