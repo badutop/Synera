@@ -11,8 +11,8 @@ const partners = [
   {
     name: "Sierra Logistics",
     logo: "/images/partners/sierra-logistics.png",
-    width: 193,
-    height: 113,
+    width: 184,
+    height: 89,
   },
   { name: "Water Ô", logo: "/images/partners/watero.png", width: 502, height: 130 },
 ];
