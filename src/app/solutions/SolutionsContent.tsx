@@ -55,7 +55,7 @@ export function SolutionsContent() {
           </Reveal>
           <Reveal delay={0.15} className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80"
+              src="/images/solutions.jpeg"
               alt={t.hero.imageAlt}
               fill
               className="object-cover"
