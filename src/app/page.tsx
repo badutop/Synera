@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
-import { StatsBand } from "@/components/sections/StatsBand";
 import { PolesOverview } from "@/components/sections/PolesOverview";
 import { ValueProp } from "@/components/sections/ValueProp";
 import { PartnersMarquee } from "@/components/sections/PartnersMarquee";
@@ -22,7 +21,6 @@ export default function HomePage() {
       <PartnersMarquee />
       <BlogPreview />
       <CtaBand />
-      <StatsBand />
     </>
   );
 }
