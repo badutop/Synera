@@ -45,7 +45,7 @@ export function ActualitesContent() {
           </Reveal>
           <Reveal delay={0.15} className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.unsplash.com/photo-1573497619951-6c9477fb83b4?auto=format&fit=crop&w=1200&q=80"
               alt={t.hero.imageAlt}
               fill
               className="object-cover"

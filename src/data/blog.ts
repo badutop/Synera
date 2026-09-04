@@ -47,7 +47,7 @@ const blogPostsFr: BlogPost[] = [
     author: "Équipe SYNERA Group",
     readingTime: "6 min",
     coverImage:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1653566031486-dc4ead13a35d?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
@@ -97,7 +97,7 @@ const blogPostsFr: BlogPost[] = [
     author: "Équipe SYNERA Group",
     readingTime: "5 min",
     coverImage:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1676119633019-be66d5c4bc4c?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
@@ -137,7 +137,7 @@ const blogPostsFr: BlogPost[] = [
     author: "Équipe SYNERA Group",
     readingTime: "5 min",
     coverImage:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1739298061740-5ed03045b280?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
@@ -170,7 +170,7 @@ const blogPostsFr: BlogPost[] = [
     author: "Équipe SYNERA Group",
     readingTime: "4 min",
     coverImage:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1638262052640-82e94d64664a?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
@@ -206,7 +206,7 @@ const blogPostsEn: BlogPost[] = [
     author: "SYNERA Group Team",
     readingTime: "6 min",
     coverImage:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1653566031486-dc4ead13a35d?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
@@ -256,7 +256,7 @@ const blogPostsEn: BlogPost[] = [
     author: "SYNERA Group Team",
     readingTime: "5 min",
     coverImage:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1676119633019-be66d5c4bc4c?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
@@ -296,7 +296,7 @@ const blogPostsEn: BlogPost[] = [
     author: "SYNERA Group Team",
     readingTime: "5 min",
     coverImage:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1739298061740-5ed03045b280?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
@@ -329,7 +329,7 @@ const blogPostsEn: BlogPost[] = [
     author: "SYNERA Group Team",
     readingTime: "4 min",
     coverImage:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1638262052640-82e94d64664a?auto=format&fit=crop&w=1600&q=80",
     content: [
       {
         paragraphs: [
