@@ -26,5 +26,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...articleRoutes];
+  const legalRoutes = ["/mentions-legales", "/politique-confidentialite"].map(
+    (path) => ({
+      url: `${BASE_URL}${path}`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    })
+  );
+
+  return [...staticRoutes, ...articleRoutes, ...legalRoutes];
 }

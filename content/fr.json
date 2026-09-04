@@ -33,8 +33,8 @@
     "legal": "Tous droits réservés.",
     "builtBy": "Réalisé par",
     "legalLinks": [
-      { "label": "Mentions légales", "href": "#" },
-      { "label": "Politique de confidentialité", "href": "#" }
+      { "label": "Mentions légales", "href": "/mentions-legales" },
+      { "label": "Politique de confidentialité", "href": "/politique-confidentialite" }
     ],
     "hqLine": "6, Cité COMICO - VDN, Dakar, Sénégal (siège social)",
     "phone": "+221 77 777 00 00"
@@ -204,5 +204,169 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Décrivez votre projet en quelques lignes…"
     }
+  },
+  "legal": {
+    "hero": {
+      "eyebrow": "Informations légales",
+      "title": "Mentions légales"
+    },
+    "updatedLabel": "Dernière mise à jour :",
+    "updatedAt": "4 septembre 2026",
+    "tocLabel": "Sommaire",
+    "sections": [
+      {
+        "heading": "Éditeur du site",
+        "paragraphs": [
+          "Le présent site est édité par SYNERA Group, société d'intermédiation, d'études et d'accompagnement de projets, dont le siège social est situé au 6, Cité COMICO - VDN, Dakar, Sénégal.",
+          "Forme juridique, capital social et numéro d'immatriculation (RCCM / NINEA) : à compléter par SYNERA Group.",
+          "Téléphone : +221 77 777 00 00 — Email : contact@synera-group.com"
+        ]
+      },
+      {
+        "heading": "Directeur de la publication",
+        "paragraphs": [
+          "Le directeur de la publication est le représentant légal de SYNERA Group. Nom et qualité du directeur de la publication : à compléter par SYNERA Group."
+        ]
+      },
+      {
+        "heading": "Hébergement",
+        "paragraphs": [
+          "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis — vercel.com."
+        ]
+      },
+      {
+        "heading": "Propriété intellectuelle",
+        "paragraphs": [
+          "L'ensemble des contenus présents sur ce site (textes, logos, illustrations, photographies, structure et mise en page) est protégé par le droit de la propriété intellectuelle et demeure la propriété exclusive de SYNERA Group, sauf mention contraire.",
+          "Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de SYNERA Group."
+        ]
+      },
+      {
+        "heading": "Liens hypertextes",
+        "paragraphs": [
+          "Ce site peut contenir des liens vers des sites tiers. SYNERA Group n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou à leur politique de confidentialité.",
+          "La mise en place d'un lien hypertexte vers ce site est soumise à l'accord préalable de SYNERA Group."
+        ]
+      },
+      {
+        "heading": "Limitation de responsabilité",
+        "paragraphs": [
+          "SYNERA Group s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site, sans garantie d'exhaustivité. SYNERA Group ne saurait être tenue responsable des erreurs, omissions ou de l'indisponibilité temporaire du site."
+        ]
+      },
+      {
+        "heading": "Droit applicable",
+        "paragraphs": [
+          "Les présentes mentions légales sont soumises au droit sénégalais. Tout litige relatif à l'utilisation de ce site relève de la compétence exclusive des juridictions de Dakar, Sénégal."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Pour toute question relative aux présentes mentions légales, contactez-nous à contact@synera-group.com ou via notre page de contact."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "hero": {
+      "eyebrow": "Vie privée",
+      "title": "Politique de confidentialité"
+    },
+    "updatedLabel": "Dernière mise à jour :",
+    "updatedAt": "4 septembre 2026",
+    "tocLabel": "Sommaire",
+    "sections": [
+      {
+        "heading": "Responsable du traitement",
+        "paragraphs": [
+          "SYNERA Group, dont le siège social est situé au 6, Cité COMICO - VDN, Dakar, Sénégal, est responsable du traitement des données personnelles collectées via ce site. Pour toute question, contactez-nous à contact@synera-group.com."
+        ]
+      },
+      {
+        "heading": "Données que nous collectons",
+        "paragraphs": [
+          "Nous collectons uniquement les données que vous nous transmettez volontairement, à travers :"
+        ],
+        "items": [
+          "Le formulaire de contact : nom, adresse email, société, sujet de votre demande et message.",
+          "Le formulaire d'inscription à la newsletter : adresse email."
+        ],
+        "paragraphsAfter": [
+          "Nous ne collectons aucune donnée bancaire ou sensible sur ce site."
+        ]
+      },
+      {
+        "heading": "Finalités du traitement",
+        "paragraphs": [
+          "Vos données sont utilisées exclusivement pour :"
+        ],
+        "items": [
+          "Répondre à vos demandes envoyées via le formulaire de contact.",
+          "Vous adresser, si vous y avez consenti, notre newsletter contenant nos analyses de marché et actualités.",
+          "Assurer le bon fonctionnement et la sécurité du site."
+        ]
+      },
+      {
+        "heading": "Base légale",
+        "paragraphs": [
+          "Le traitement de vos données repose sur votre consentement (formulaire de contact, inscription à la newsletter) ainsi que, le cas échéant, sur l'intérêt légitime de SYNERA Group à répondre à vos demandes et à assurer la sécurité du site."
+        ]
+      },
+      {
+        "heading": "Destinataires des données",
+        "paragraphs": [
+          "Vos données sont destinées aux équipes internes de SYNERA Group habilitées à traiter votre demande. Elles peuvent également être transmises à nos prestataires techniques (hébergement, envoi d'emails) dans la stricte mesure nécessaire à la fourniture de leurs services, et ne sont ni vendues ni louées à des tiers."
+        ]
+      },
+      {
+        "heading": "Durée de conservation",
+        "paragraphs": [
+          "Les données issues du formulaire de contact sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées conformément aux obligations légales applicables. Les adresses email collectées pour la newsletter sont conservées jusqu'à votre désinscription."
+        ]
+      },
+      {
+        "heading": "Vos droits",
+        "paragraphs": [
+          "Conformément à la réglementation applicable en matière de protection des données personnelles, vous disposez des droits suivants :"
+        ],
+        "items": [
+          "Droit d'accès à vos données personnelles",
+          "Droit de rectification des données inexactes ou incomplètes",
+          "Droit à l'effacement de vos données",
+          "Droit d'opposition au traitement de vos données",
+          "Droit à la portabilité de vos données",
+          "Droit de retirer votre consentement à tout moment"
+        ],
+        "paragraphsAfter": [
+          "Pour exercer ces droits, contactez-nous à contact@synera-group.com. Vous disposez également du droit d'introduire une réclamation auprès de la Commission de Protection des Données Personnelles (CDP) du Sénégal."
+        ]
+      },
+      {
+        "heading": "Cookies et traceurs",
+        "paragraphs": [
+          "Ce site utilise le stockage local de votre navigateur (localStorage) pour mémoriser votre préférence de langue et de thème d'affichage (clair/sombre). Ces informations techniques ne sont pas transmises à SYNERA Group et ne permettent pas de vous identifier personnellement.",
+          "À la date de mise à jour de cette politique, le site n'utilise aucun cookie de mesure d'audience ni traceur publicitaire tiers. Si cela venait à évoluer, cette politique serait mise à jour en conséquence et, le cas échéant, votre consentement vous serait demandé."
+        ]
+      },
+      {
+        "heading": "Sécurité",
+        "paragraphs": [
+          "SYNERA Group met en œuvre des mesures techniques et organisationnelles raisonnables pour protéger vos données contre tout accès, modification, divulgation ou destruction non autorisés."
+        ]
+      },
+      {
+        "heading": "Modifications de la présente politique",
+        "paragraphs": [
+          "SYNERA Group peut être amenée à modifier la présente politique de confidentialité, notamment pour se conformer à toute évolution légale, réglementaire ou technique. La date de dernière mise à jour figure en haut de cette page."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Pour toute question relative à la présente politique ou à l'utilisation de vos données, contactez-nous à contact@synera-group.com."
+        ]
+      }
+    ]
   }
 }

@@ -33,8 +33,8 @@
     "legal": "All rights reserved.",
     "builtBy": "Built by",
     "legalLinks": [
-      { "label": "Legal notice", "href": "#" },
-      { "label": "Privacy policy", "href": "#" }
+      { "label": "Legal notice", "href": "/mentions-legales" },
+      { "label": "Privacy policy", "href": "/politique-confidentialite" }
     ],
     "hqLine": "6, Cité COMICO - VDN, Dakar, Senegal (head office)",
     "phone": "+221 77 777 00 00"
@@ -204,5 +204,169 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Describe your project in a few lines…"
     }
+  },
+  "legal": {
+    "hero": {
+      "eyebrow": "Legal information",
+      "title": "Legal Notice"
+    },
+    "updatedLabel": "Last updated:",
+    "updatedAt": "September 4, 2026",
+    "tocLabel": "Contents",
+    "sections": [
+      {
+        "heading": "Site publisher",
+        "paragraphs": [
+          "This site is published by SYNERA Group, a business intermediation, research and project support firm, headquartered at 6, Cité COMICO - VDN, Dakar, Senegal.",
+          "Legal form, share capital and registration number (RCCM / NINEA): to be completed by SYNERA Group.",
+          "Phone: +221 77 777 00 00 — Email: contact@synera-group.com"
+        ]
+      },
+      {
+        "heading": "Publication director",
+        "paragraphs": [
+          "The publication director is SYNERA Group's legal representative. Name and title of the publication director: to be completed by SYNERA Group."
+        ]
+      },
+      {
+        "heading": "Hosting",
+        "paragraphs": [
+          "This site is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA — vercel.com."
+        ]
+      },
+      {
+        "heading": "Intellectual property",
+        "paragraphs": [
+          "All content on this site (text, logos, illustrations, photographs, structure and layout) is protected by intellectual property law and remains the exclusive property of SYNERA Group, unless otherwise stated.",
+          "Any reproduction, representation, modification, publication or adaptation of all or part of the site's elements, by any means or process, is prohibited without SYNERA Group's prior written consent."
+        ]
+      },
+      {
+        "heading": "Hyperlinks",
+        "paragraphs": [
+          "This site may contain links to third-party sites. SYNERA Group has no control over these sites and disclaims any responsibility for their content or privacy practices.",
+          "Setting up a hyperlink to this site requires SYNERA Group's prior consent."
+        ]
+      },
+      {
+        "heading": "Limitation of liability",
+        "paragraphs": [
+          "SYNERA Group strives to keep the information on this site accurate and up to date, without guaranteeing completeness. SYNERA Group cannot be held liable for errors, omissions, or temporary unavailability of the site."
+        ]
+      },
+      {
+        "heading": "Governing law",
+        "paragraphs": [
+          "This legal notice is governed by Senegalese law. Any dispute relating to the use of this site falls under the exclusive jurisdiction of the courts of Dakar, Senegal."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "For any question regarding this legal notice, contact us at contact@synera-group.com or via our contact page."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "hero": {
+      "eyebrow": "Privacy",
+      "title": "Privacy Policy"
+    },
+    "updatedLabel": "Last updated:",
+    "updatedAt": "September 4, 2026",
+    "tocLabel": "Contents",
+    "sections": [
+      {
+        "heading": "Data controller",
+        "paragraphs": [
+          "SYNERA Group, headquartered at 6, Cité COMICO - VDN, Dakar, Senegal, is the controller of the personal data collected through this site. For any question, contact us at contact@synera-group.com."
+        ]
+      },
+      {
+        "heading": "Data we collect",
+        "paragraphs": [
+          "We only collect the data you voluntarily provide us, through:"
+        ],
+        "items": [
+          "The contact form: name, email address, company, subject of your request and message.",
+          "The newsletter sign-up form: email address."
+        ],
+        "paragraphsAfter": [
+          "We do not collect any banking or sensitive data on this site."
+        ]
+      },
+      {
+        "heading": "Purposes of processing",
+        "paragraphs": [
+          "Your data is used exclusively to:"
+        ],
+        "items": [
+          "Respond to requests sent through the contact form.",
+          "Send you, if you have consented, our newsletter with market insights and news.",
+          "Ensure the proper functioning and security of the site."
+        ]
+      },
+      {
+        "heading": "Legal basis",
+        "paragraphs": [
+          "The processing of your data is based on your consent (contact form, newsletter sign-up) and, where applicable, on SYNERA Group's legitimate interest in responding to your requests and securing the site."
+        ]
+      },
+      {
+        "heading": "Data recipients",
+        "paragraphs": [
+          "Your data is intended for SYNERA Group's internal teams authorized to handle your request. It may also be shared with our technical service providers (hosting, email delivery) strictly to the extent necessary to provide their services, and is never sold or rented to third parties."
+        ]
+      },
+      {
+        "heading": "Retention period",
+        "paragraphs": [
+          "Data from the contact form is kept for as long as necessary to process your request, then archived or deleted in accordance with applicable legal obligations. Email addresses collected for the newsletter are kept until you unsubscribe."
+        ]
+      },
+      {
+        "heading": "Your rights",
+        "paragraphs": [
+          "In accordance with applicable personal data protection regulations, you have the following rights:"
+        ],
+        "items": [
+          "Right of access to your personal data",
+          "Right to rectify inaccurate or incomplete data",
+          "Right to erasure of your data",
+          "Right to object to the processing of your data",
+          "Right to data portability",
+          "Right to withdraw your consent at any time"
+        ],
+        "paragraphsAfter": [
+          "To exercise these rights, contact us at contact@synera-group.com. You also have the right to lodge a complaint with Senegal's data protection authority, the Commission de Protection des Données Personnelles (CDP)."
+        ]
+      },
+      {
+        "heading": "Cookies and trackers",
+        "paragraphs": [
+          "This site uses your browser's local storage (localStorage) to remember your language and display theme (light/dark) preferences. This technical information is not transmitted to SYNERA Group and does not personally identify you.",
+          "As of this policy's last update, the site does not use any audience-measurement cookies or third-party advertising trackers. Should this change, this policy will be updated accordingly and, where required, your consent will be requested."
+        ]
+      },
+      {
+        "heading": "Security",
+        "paragraphs": [
+          "SYNERA Group implements reasonable technical and organizational measures to protect your data against unauthorized access, alteration, disclosure or destruction."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "paragraphs": [
+          "SYNERA Group may update this privacy policy, in particular to comply with legal, regulatory or technical developments. The date of the last update appears at the top of this page."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "For any question regarding this policy or the use of your data, contact us at contact@synera-group.com."
+        ]
+      }
+    ]
   }
 }
