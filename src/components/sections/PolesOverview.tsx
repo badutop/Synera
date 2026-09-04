@@ -10,11 +10,11 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 
 const poleImages: Record<string, string> = {
   intermediation:
-    "https://images.unsplash.com/photo-1739285452618-0b7b3d04f953?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1759310610552-914069ec2e0b?auto=format&fit=crop&w=800&q=80",
   "etudes-conseil":
-    "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1573496528298-f0e9d3c7ce55?auto=format&fit=crop&w=800&q=80",
   "accompagnement-projets":
-    "https://images.unsplash.com/photo-1573496130103-a442a3754d0e?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1604783125462-37d81c7385e6?auto=format&fit=crop&w=800&q=80",
   "competences-rh":
     "https://images.unsplash.com/photo-1653565685060-e15e492a7fda?auto=format&fit=crop&w=800&q=80",
 };
@@ -36,29 +36,29 @@ export function PolesOverview() {
         </Link>
       </div>
 
-      <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {poles[locale].map((pole, i) => (
           <Reveal key={pole.slug} delay={i * 0.06}>
             <Link
               href={`/solutions#${pole.slug}`}
-              className="group relative flex aspect-[3/4] w-full flex-col justify-end overflow-hidden rounded-2xl shadow-card transition-shadow duration-300 hover:shadow-soft"
+              className="group relative flex aspect-square w-full flex-col justify-end overflow-hidden rounded-2xl shadow-card transition-shadow duration-300 hover:shadow-soft"
             >
               <Image
                 src={poleImages[pole.slug]}
                 alt={pole.shortTitle}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(min-width: 1024px) 22vw, 45vw"
+                sizes="(min-width: 640px) 22vw, 45vw"
               />
               <div
-                className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/30 to-transparent"
+                className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/25 to-transparent"
                 aria-hidden="true"
               />
-              <div className="relative flex flex-col gap-2 p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white backdrop-blur-sm">
-                  <pole.icon className="h-4 w-4" />
+              <div className="relative flex flex-col gap-1.5 p-3">
+                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/15 text-white backdrop-blur-sm">
+                  <pole.icon className="h-3.5 w-3.5" />
                 </div>
-                <span className="font-display text-sm font-semibold leading-snug text-white sm:text-base">
+                <span className="font-display text-xs font-semibold leading-snug text-white sm:text-sm">
                   {pole.shortTitle}
                 </span>
               </div>

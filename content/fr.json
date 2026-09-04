@@ -95,7 +95,7 @@
     "hero": {
       "eyebrow": "Notre identité",
       "title": "Un trait d'union, pas un simple intermédiaire.",
-      "paragraph": "SYNERA Group est né d'un constat simple : les meilleures opportunités de développement international échouent rarement par manque d'ambition, mais par manque de connaissance fine des écosystèmes locaux. Nous avons construit le groupe pour combler cet écart — avec un réseau de contacts qualifiés, une expertise sectorielle transverse, et une exigence méthodologique qui sécurise chaque étape de vos projets.",
+      "paragraph": "SYNERA Group est né d'un constat simple : les meilleures opportunités de développement international échouent rarement par manque d'ambition, mais par manque de connaissance fine des écosystèmes locaux. Nous avons construit le groupe pour combler cet écart — avec un réseau de contacts qualifiés, une expertise sectorielle transversale, et une exigence méthodologique qui sécurise chaque étape de vos projets.",
       "imageAlt": "Équipe SYNERA Group en réunion de travail"
     },
     "mission": {
@@ -132,7 +132,7 @@
     "methodologyLabel": "Notre méthodologie",
     "ctaLabel": "Discuter de ce besoin",
     "sectorsSection": {
-      "eyebrow": "Secteurs transverses",
+      "eyebrow": "Secteurs transversaux",
       "title": "Une expertise qui traverse les secteurs",
       "linkLabel": "Découvrir nos secteurs & références →"
     }
@@ -153,7 +153,7 @@
   "secteurs": {
     "hero": {
       "eyebrow": "Secteurs & Références",
-      "title": "Une expertise transverse, ancrée dans le concret.",
+      "title": "Une expertise transversale, ancrée dans le concret.",
       "description": "Nos équipes interviennent sur des secteurs variés, avec la même exigence méthodologique et le même souci du résultat.",
       "imageAlt": "Réunion d'équipe pluridisciplinaire"
     },
