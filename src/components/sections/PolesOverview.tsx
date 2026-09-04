@@ -1,11 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { poles } from "@/data/solutions";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+
+const poleImages: Record<string, string> = {
+  intermediation:
+    "https://images.unsplash.com/photo-1739285452618-0b7b3d04f953?auto=format&fit=crop&w=800&q=80",
+  "etudes-conseil":
+    "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+  "accompagnement-projets":
+    "https://images.unsplash.com/photo-1573496130103-a442a3754d0e?auto=format&fit=crop&w=800&q=80",
+  "competences-rh":
+    "https://images.unsplash.com/photo-1653565685060-e15e492a7fda?auto=format&fit=crop&w=800&q=80",
+};
 
 export function PolesOverview() {
   const { locale, content } = useLanguage();
@@ -24,19 +36,32 @@ export function PolesOverview() {
         </Link>
       </div>
 
-      <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
         {poles[locale].map((pole, i) => (
           <Reveal key={pole.slug} delay={i * 0.06}>
             <Link
               href={`/solutions#${pole.slug}`}
-              className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-ink-900/8 bg-white p-5 text-center shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-soft dark:border-white/10 dark:bg-white/[0.03]"
+              className="group relative flex aspect-[3/4] w-full flex-col justify-end overflow-hidden rounded-2xl shadow-card transition-shadow duration-300 hover:shadow-soft"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50 text-primary transition-colors group-hover:bg-primary group-hover:text-white dark:bg-primary-500/10">
-                <pole.icon className="h-5 w-5" />
+              <Image
+                src={poleImages[pole.slug]}
+                alt={pole.shortTitle}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(min-width: 1024px) 22vw, 45vw"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/30 to-transparent"
+                aria-hidden="true"
+              />
+              <div className="relative flex flex-col gap-2 p-4">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white backdrop-blur-sm">
+                  <pole.icon className="h-4 w-4" />
+                </div>
+                <span className="font-display text-sm font-semibold leading-snug text-white sm:text-base">
+                  {pole.shortTitle}
+                </span>
               </div>
-              <span className="text-sm font-semibold text-ink-900 dark:text-white">
-                {pole.shortTitle}
-              </span>
             </Link>
           </Reveal>
         ))}
