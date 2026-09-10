@@ -10,7 +10,7 @@
 			</article>
 		<?php endwhile;
 	else : ?>
-		<p class="text-ink-400"><?php t('Aucun contenu trouvé.', 'No content found.'); ?></p>
+		<p class="text-ink-400">Aucun contenu trouvé.</p>
 	<?php endif; ?>
 </section>
 

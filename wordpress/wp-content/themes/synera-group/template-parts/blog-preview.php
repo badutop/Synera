@@ -12,13 +12,11 @@ if (!$latest->have_posts()) {
 <section class="mx-auto max-w-content px-5 py-14 sm:px-8">
 	<div class="flex flex-wrap items-end justify-between gap-6">
 		<?php get_template_part('template-parts/section-heading', null, [
-			'eyebrow_fr' => 'Actualités', 'eyebrow_en' => 'Insights',
-			'title_fr'   => 'Nos derniers articles',
-			'title_en'   => 'Our latest articles',
-			'desc_fr'    => 'Analyses de marché, méthodologie et actualités du groupe.',
-			'desc_en'    => 'Market analysis, methodology and group news.',
+			'eyebrow' => 'Actualités',
+			'title'   => 'Nos derniers articles',
+			'desc'    => 'Analyses de marché, méthodologie et actualités du groupe.',
 		]); ?>
-		<a href="<?php echo esc_url(home_url('/actualites/')); ?>" class="whitespace-nowrap text-sm font-semibold text-primary hover:underline"><?php t('Toutes les actualités', 'All insights'); ?> →</a>
+		<a href="<?php echo esc_url(home_url('/actualites/')); ?>" class="whitespace-nowrap text-sm font-semibold text-primary hover:underline">Toutes les actualités →</a>
 	</div>
 
 	<div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

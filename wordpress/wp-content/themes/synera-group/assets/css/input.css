@@ -27,12 +27,25 @@
   }
 }
 
-/* Bilingual toggle: default language is French. JS sets data-locale="en" on <html> to switch. */
-html:not([data-locale="en"]) [data-lang="en"] {
-  display: none !important;
+/* Benefit lists (Solutions page): checkmark instead of a bullet, editable as a plain list */
+.check-list {
+  list-style: none;
+  padding-left: 0;
 }
-html[data-locale="en"] [data-lang="fr"] {
-  display: none !important;
+.check-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: theme("colors.primary.DEFAULT");
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 /* Reveal-on-scroll (replaces Framer Motion) */

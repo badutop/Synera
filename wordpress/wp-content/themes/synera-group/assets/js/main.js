@@ -3,64 +3,6 @@
 
 	var html = document.documentElement;
 
-	function getLocale() {
-		return html.getAttribute('data-locale') === 'en' ? 'en' : 'fr';
-	}
-
-	function applyI18nAttrs() {
-		var locale = getLocale();
-		document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
-			var map;
-			try {
-				map = JSON.parse(el.getAttribute('data-i18n-attr'));
-			} catch (e) {
-				return;
-			}
-			Object.keys(map).forEach(function (attr) {
-				var pair = map[attr];
-				el.setAttribute(attr, pair[locale] || pair.fr);
-			});
-		});
-
-		// <option> text can't be toggled with CSS (child elements aren't rendered),
-		// so select options carry data-fr/data-en and get their text swapped directly.
-		document.querySelectorAll('select[data-i18n-select] option').forEach(function (opt) {
-			opt.textContent = opt.getAttribute('data-' + locale) || opt.getAttribute('data-fr') || opt.textContent;
-		});
-	}
-
-	function setLocale(locale) {
-		if (locale === 'en') {
-			html.setAttribute('data-locale', 'en');
-		} else {
-			html.removeAttribute('data-locale');
-		}
-		try {
-			localStorage.setItem('synera-locale', locale);
-		} catch (e) {}
-		applyI18nAttrs();
-		updateLangToggleUI();
-	}
-
-	function updateLangToggleUI() {
-		var locale = getLocale();
-		document.querySelectorAll('[data-set-lang]').forEach(function (btn) {
-			var active = btn.getAttribute('data-set-lang') === locale;
-			btn.classList.toggle('bg-primary', active);
-			btn.classList.toggle('text-white', active);
-			btn.classList.toggle('text-ink-700', !active);
-			btn.classList.toggle('dark:text-white', !active);
-		});
-	}
-
-	document.addEventListener('click', function (e) {
-		var btn = e.target.closest('[data-set-lang]');
-		if (btn) setLocale(btn.getAttribute('data-set-lang'));
-	});
-
-	applyI18nAttrs();
-	updateLangToggleUI();
-
 	// Theme toggle
 	function setTheme(theme) {
 		html.classList.toggle('dark', theme === 'dark');
@@ -180,7 +122,7 @@
 			e.preventDefault();
 			var input = newsletterForm.querySelector('input');
 			input.value = '';
-			input.placeholder = getLocale() === 'en' ? 'Thanks — you are subscribed!' : 'Merci, vous êtes inscrit·e !';
+			input.placeholder = 'Merci, vous êtes inscrit·e !';
 		});
 	}
 })();

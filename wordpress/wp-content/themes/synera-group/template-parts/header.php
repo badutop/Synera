@@ -15,16 +15,15 @@ $current   = trailingslashit(parse_url(home_url($_SERVER['REQUEST_URI'] ?? '/'),
 				?>
 				<a href="<?php echo esc_url($href); ?>"
 					class="rounded-full px-4 py-2 text-sm font-medium transition-colors <?php echo $active ? 'bg-primary text-white shadow-soft' : 'text-ink-700 hover:bg-primary-50 hover:text-primary dark:text-ink-100 dark:hover:bg-white/5'; ?>">
-					<?php t($link['fr'], $link['en']); ?>
+					<?php echo esc_html($link['label']); ?>
 				</a>
 			<?php endforeach; ?>
 		</nav>
 
 		<div class="hidden items-center gap-3 xl:flex">
-			<?php get_template_part('template-parts/language-toggle'); ?>
 			<?php get_template_part('template-parts/theme-toggle'); ?>
 			<a href="<?php echo esc_url(home_url('/contact/')); ?>" class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-600">
-				<?php t('Discutons de votre projet', "Let's talk about your project"); ?>
+				Discutons de votre projet
 			</a>
 		</div>
 

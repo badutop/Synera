@@ -10,9 +10,7 @@
 <script>
 (function () {
 	try {
-		var locale = localStorage.getItem('synera-locale');
 		var theme = localStorage.getItem('synera-theme');
-		if (locale === 'en') document.documentElement.setAttribute('data-locale', 'en');
 		if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 			document.documentElement.classList.add('dark');
 		}
