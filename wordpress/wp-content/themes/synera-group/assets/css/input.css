@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Same pairing as the original Next.js site (next/font/google):
+       Space Grotesk for headings, Inter for body text. */
+    --font-display: "Space Grotesk", sans-serif;
+    --font-sans: "Inter", sans-serif;
+  }
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 96px;
