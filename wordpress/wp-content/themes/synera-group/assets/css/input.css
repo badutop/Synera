@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    @apply bg-white text-ink-900 antialiased dark:bg-ink-900 dark:text-white;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary-700;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-white dark:ring-offset-ink-900;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Bilingual toggle: default language is French. JS sets data-locale="en" on <html> to switch. */
+html:not([data-locale="en"]) [data-lang="en"] {
+  display: none !important;
+}
+html[data-locale="en"] [data-lang="fr"] {
+  display: none !important;
+}
+
+/* Reveal-on-scroll (replaces Framer Motion) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile menu drawer */
+.mobile-menu-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.mobile-menu-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu-drawer {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mobile-menu-drawer.is-open {
+  transform: translateX(0);
+}
+
+/* Contact form submit states */
+[data-sending-label] {
+  display: none;
+}
+.is-sending [data-idle-label] {
+  display: none;
+}
+.is-sending [data-sending-label] {
+  display: inline-flex;
+}
+[data-form-status] [data-status-success],
+[data-form-status] [data-status-error] {
+  display: none;
+}
+[data-form-status][data-state="success"] [data-status-success],
+[data-form-status][data-state="error"] [data-status-error] {
+  display: block;
+}
+[data-form-status] {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+[data-form-status][data-state="success"] {
+  color: #059669;
+}
+[data-form-status][data-state="error"] {
+  color: #dc2626;
+}

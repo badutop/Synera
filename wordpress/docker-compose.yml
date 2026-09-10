@@ -1,0 +1,55 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: synera-wp-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    container_name: synera-wp
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DEBUG: 1
+    ports:
+      - "8080:80"
+    volumes:
+      - wp_data:/var/www/html
+      - ./wp-content/themes/synera-group:/var/www/html/wp-content/themes/synera-group
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+
+  wpcli:
+    image: wordpress:cli-php8.2
+    container_name: synera-wp-cli
+    depends_on:
+      - db
+      - wordpress
+    user: "33:33"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    volumes:
+      - wp_data:/var/www/html
+      - ./wp-content/themes/synera-group:/var/www/html/wp-content/themes/synera-group
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+volumes:
+  db_data:
+  wp_data:
