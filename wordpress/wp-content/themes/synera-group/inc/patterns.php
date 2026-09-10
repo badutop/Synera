@@ -60,20 +60,28 @@ function synera_block_image(string $src, string $alt, string $class = ''): strin
 	return "<!-- wp:image" . synera_json($attrs) . " -->\n<figure class=\"{$class_attr}\"><img src=\"" . esc_url($src) . '" alt="' . esc_attr($alt) . "\"/></figure>\n<!-- /wp:image -->\n";
 }
 
-/** @param array<int,array{text:string,url:string,style?:string}> $buttons */
+/**
+ * Buttons render with only the native block classes in the saved HTML
+ * (`wp-block-button__link wp-element-button`, plus `is-style-outline` on
+ * the wrapper for the outline variant) — the visual style comes from CSS
+ * in assets/css/input.css targeting those native classes, not from
+ * Tailwind utility classes baked into the saved markup. Baking extra
+ * classes into an element beyond what the block's own `save()` produces
+ * is exactly what causes Gutenberg's "block validation failed" / content
+ * recovery prompt, since the editor recomputes the expected HTML from the
+ * stored attributes and diffs it against the stored HTML.
+ *
+ * @param array<int,array{text:string,url:string,style?:string}> $buttons
+ */
 function synera_block_buttons(array $buttons, string $class = ''): string {
-	$fill_link    = 'wp-block-button__link wp-element-button inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-600';
-	$outline_link = 'wp-block-button__link wp-element-button inline-flex items-center justify-center rounded-full border border-ink-100 px-6 py-3 text-sm font-semibold text-ink-900 transition hover:bg-primary-50 hover:text-primary dark:border-white/10 dark:text-white';
-
 	$inner = '';
 	foreach ($buttons as $b) {
 		$is_outline = ($b['style'] ?? 'fill') === 'outline';
-		$link_class = $is_outline ? $outline_link : $fill_link;
 		$btn_class  = $is_outline ? 'is-style-outline' : '';
-		$inner .= "<!-- wp:button" . synera_json($btn_class ? ['className' => $btn_class] : []) . " -->\n<div class=\"wp-block-button {$btn_class}\"><a class=\"{$link_class}\" href=\"" . esc_url($b['url']) . '">' . $b['text'] . "</a></div>\n<!-- /wp:button -->\n";
+		$inner .= "<!-- wp:button" . synera_json($btn_class ? ['className' => $btn_class] : []) . " -->\n<div class=\"wp-block-button {$btn_class}\"><a class=\"wp-block-button__link wp-element-button\" href=\"" . esc_url($b['url']) . '">' . $b['text'] . "</a></div>\n<!-- /wp:button -->\n";
 	}
-	$attrs      = $class ? ['className' => $class] : [];
-	$class_attr = trim('wp-block-buttons ' . $class);
+	$attrs      = ['layout' => ['type' => 'flex']] + ($class ? ['className' => $class] : []);
+	$class_attr = trim('wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex ' . $class);
 	return "<!-- wp:buttons" . synera_json($attrs) . " -->\n<div class=\"{$class_attr}\">\n{$inner}</div>\n<!-- /wp:buttons -->\n";
 }
 

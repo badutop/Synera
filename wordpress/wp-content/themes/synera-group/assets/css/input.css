@@ -48,6 +48,16 @@
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
+/* Buttons: styled via the block's own native classes (not inline Tailwind
+   classes baked into post_content) so the block stays valid/editable in
+   Gutenberg. See inc/patterns.php synera_block_buttons(). */
+.wp-block-button__link {
+  @apply inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-600;
+}
+.wp-block-button.is-style-outline .wp-block-button__link {
+  @apply border border-ink-100 bg-transparent px-6 py-3 text-ink-900 hover:bg-primary-50 hover:text-primary dark:border-white/10 dark:text-white;
+}
+
 /* Reveal-on-scroll (replaces Framer Motion) */
 .reveal {
   opacity: 0;
