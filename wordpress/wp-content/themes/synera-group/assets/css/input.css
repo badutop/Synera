@@ -58,8 +58,13 @@
   @apply border border-ink-100 bg-transparent px-6 py-3 text-ink-900 hover:bg-primary-50 hover:text-primary dark:border-white/10 dark:text-white;
 }
 
-/* Reveal-on-scroll (replaces Framer Motion) */
-.reveal {
+/* Reveal-on-scroll (replaces Framer Motion). Scoped to exclude the block
+   editor: main.js (which adds .is-visible via IntersectionObserver) only
+   ever loads on the front end, so inside the editor's iframe (body carries
+   .editor-styles-wrapper there) every .reveal element would otherwise be
+   stuck at opacity:0 forever, making all page content look empty in the
+   canvas even though it's fully present in the DOM. */
+body:not(.editor-styles-wrapper) .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
