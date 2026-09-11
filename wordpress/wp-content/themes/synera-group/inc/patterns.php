@@ -141,6 +141,40 @@ function synera_pattern_hero(string $eyebrow, string $title, string $desc, strin
 	return synera_block_group($left . $right, 'grid items-center gap-14 lg:grid-cols-2 not-prose', 'div');
 }
 
+/**
+ * Full-bleed hero: edge-to-edge photo with a gradient overlay and the text
+ * anchored bottom-left on top of it. Used only on the homepage — every
+ * other page keeps the split text/image layout from synera_pattern_hero().
+ */
+function synera_pattern_hero_fullbleed(string $title, string $desc, string $image, string $alt, array $buttons = [], ?array $stat = null): string {
+	$text  = synera_block_heading($title, 1, 'font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl');
+	$text .= synera_block_paragraph($desc, 'mt-4 max-w-xl text-lg text-white/85');
+	if ($buttons) {
+		$text .= synera_block_buttons($buttons, 'mt-8 flex flex-wrap gap-4');
+	}
+	$text_block = synera_block_group($text, 'reveal max-w-xl', 'div');
+
+	$photo = '<img src="' . esc_url($image) . '" alt="' . esc_attr($alt) . '" class="absolute inset-0 h-full w-full object-cover" />'
+		. '<div class="absolute inset-0 bg-gradient-to-r from-ink-900/90 via-ink-900/60 to-ink-900/10"></div>'
+		. '<div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-transparent to-transparent"></div>';
+
+	$stat_html = '';
+	if ($stat) {
+		$stat_html = '<div class="absolute bottom-6 right-5 z-10 rounded-2xl bg-white p-5 shadow-card dark:bg-ink-800 sm:right-8">'
+			. '<p class="font-display text-3xl font-bold text-primary">' . esc_html($stat['value']) . '</p>'
+			. '<p class="max-w-[10rem] text-sm text-ink-400">' . esc_html($stat['label']) . '</p>'
+			. '</div>';
+	}
+
+	$content = synera_block_group($text_block, 'relative z-10 mx-auto flex h-full max-w-content items-end px-5 pb-14 sm:px-8 sm:pb-20', 'div');
+
+	return synera_block_group(
+		synera_block_html($photo) . $content . synera_block_html($stat_html),
+		'relative h-[85vh] max-h-[760px] min-h-[560px] w-full overflow-hidden',
+		'div'
+	);
+}
+
 /** One "pôle" section: icon + title + description + benefits, next to numbered methodology steps. */
 function synera_pattern_pole(string $slug, string $icon, string $title, string $desc, array $benefits, array $steps, string $cta_label, string $cta_url): string {
 	$left  = synera_block_html(synera_icon_badge_html($icon));

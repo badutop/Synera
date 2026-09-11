@@ -5,7 +5,7 @@ $current   = trailingslashit(parse_url(home_url($_SERVER['REQUEST_URI'] ?? '/'),
 <header id="site-header" class="sticky top-0 z-40 border-b border-transparent bg-white/80 backdrop-blur transition-colors dark:bg-ink-900/80" data-header>
 	<div class="mx-auto flex h-20 max-w-content items-center justify-between px-5 sm:px-8">
 		<a href="<?php echo esc_url(home_url('/')); ?>" class="shrink-0">
-			<?php get_template_part('template-parts/logo', null, ['size' => 'md']); ?>
+			<?php get_template_part('template-parts/logo', null, ['size' => 'lg']); ?>
 		</a>
 
 		<nav class="hidden items-center gap-1 xl:flex" aria-label="Primary">
@@ -22,9 +22,6 @@ $current   = trailingslashit(parse_url(home_url($_SERVER['REQUEST_URI'] ?? '/'),
 
 		<div class="hidden items-center gap-3 xl:flex">
 			<?php get_template_part('template-parts/theme-toggle'); ?>
-			<a href="<?php echo esc_url(home_url('/contact/')); ?>" class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-600">
-				Discutons de votre projet
-			</a>
 		</div>
 
 		<div class="flex items-center gap-2 xl:hidden">
