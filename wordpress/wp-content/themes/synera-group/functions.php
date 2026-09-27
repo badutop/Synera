@@ -12,6 +12,7 @@ define('SYNERA_VERSION', '1.0.2');
 require get_theme_file_path('inc/icons.php');
 require get_theme_file_path('inc/data.php');
 require get_theme_file_path('inc/post-types.php');
+require get_theme_file_path('inc/email-templates.php');
 require get_theme_file_path('inc/contact-form.php');
 require get_theme_file_path('inc/patterns.php');
 
@@ -88,5 +89,17 @@ function synera_phpmailer_smtp(PHPMailer\PHPMailer\PHPMailer $phpmailer): void {
 	$phpmailer->SMTPAuth   = true;
 	$phpmailer->Username   = SYNERA_SMTP_USER;
 	$phpmailer->Password   = SYNERA_SMTP_PASS;
+
+	// Embed the logo as an inline attachment (cid:synera-logo) rather than a
+	// remote-hosted <img src>: mobile mail apps (Gmail/Outlook) proxy and
+	// gate remote images inconsistently with desktop webmail, which can
+	// leave the logo not loading on mobile even though the URL is reachable.
+	// An embedded image ships with the message, so there's nothing to fetch.
+	if (strpos($phpmailer->Body, 'cid:synera-logo') !== false) {
+		$logo_path = get_theme_file_path('assets/images/synera-logo-email.png');
+		if (file_exists($logo_path)) {
+			$phpmailer->addEmbeddedImage($logo_path, 'synera-logo', 'synera-logo-email.png', 'base64', 'image/png');
+		}
+	}
 }
 add_action('phpmailer_init', 'synera_phpmailer_smtp');

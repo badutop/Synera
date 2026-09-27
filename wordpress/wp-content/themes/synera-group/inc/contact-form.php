@@ -42,6 +42,13 @@ function synera_handle_contact_form(): void {
 		wp_send_json_error(['errors' => ['general' => 'send_failed']], 502);
 	}
 
+	wp_mail(
+		$email,
+		'Votre message a bien été reçu : SYNERA Groupe',
+		synera_contact_autoreply_html($name, $subject),
+		['Content-Type: text/html; charset=UTF-8']
+	);
+
 	wp_send_json_success();
 }
 add_action('wp_ajax_synera_contact', 'synera_handle_contact_form');
@@ -65,6 +72,13 @@ function synera_handle_newsletter_signup(): void {
 	if (!$sent) {
 		wp_send_json_error(['errors' => ['general' => 'send_failed']], 502);
 	}
+
+	wp_mail(
+		$email,
+		'Inscription confirmée : SYNERA Groupe',
+		synera_newsletter_autoreply_html(),
+		['Content-Type: text/html; charset=UTF-8']
+	);
 
 	wp_send_json_success();
 }
