@@ -22,7 +22,7 @@ $reading_time = get_post_meta(get_the_ID(), 'reading_time', true);
 	</h1>
 
 	<div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-ink-400">
-		<span>Équipe SYNERA Group</span>
+		<span>Équipe <strong>SYNERA Groupe</strong></span>
 		<span class="flex items-center gap-1.5"><?php synera_icon('calendar', 'h-4 w-4'); ?><?php echo esc_html(get_the_date('j F Y')); ?></span>
 		<?php if ($reading_time) : ?>
 			<span class="flex items-center gap-1.5">

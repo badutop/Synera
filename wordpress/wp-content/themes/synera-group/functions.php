@@ -1,13 +1,13 @@
 <?php
 /**
- * Synera Group theme bootstrap.
+ * Synera Groupe theme bootstrap.
  */
 
 if (!defined('ABSPATH')) {
 	exit;
 }
 
-define('SYNERA_VERSION', '1.0.0');
+define('SYNERA_VERSION', '1.0.1');
 
 require get_theme_file_path('inc/icons.php');
 require get_theme_file_path('inc/data.php');
@@ -48,3 +48,8 @@ function synera_body_classes(array $classes): array {
 	return $classes;
 }
 add_filter('body_class', 'synera_body_classes');
+
+function synera_document_title_separator(): string {
+	return ':';
+}
+add_filter('document_title_separator', 'synera_document_title_separator');

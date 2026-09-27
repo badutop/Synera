@@ -122,7 +122,7 @@
 			e.preventDefault();
 			var input = newsletterForm.querySelector('input');
 			input.value = '';
-			input.placeholder = 'Merci, vous êtes inscrit·e !';
+			input.placeholder = 'Merci, vous êtes inscrit·e.';
 		});
 	}
 })();

@@ -289,10 +289,10 @@ function synera_pattern_section(string $inner, string $bg_class = '', string $in
  * ------------------------------------------------------------------- */
 
 function synera_register_patterns(): void {
-	register_block_pattern_category('synera', ['label' => 'Synera Group']);
+	register_block_pattern_category('synera', ['label' => 'Synera Groupe']);
 
 	register_block_pattern('synera/hero-split', [
-		'title'      => 'Synera — Hero (titre + image)',
+		'title'      => 'Synera : Hero (titre + image)',
 		'categories' => ['synera'],
 		'content'    => synera_pattern_section(synera_pattern_hero(
 			'Eyebrow',
@@ -305,7 +305,7 @@ function synera_register_patterns(): void {
 	]);
 
 	register_block_pattern('synera/pole-detail', [
-		'title'      => 'Synera — Pôle (icône + méthodologie)',
+		'title'      => 'Synera : Pôle (icône + méthodologie)',
 		'categories' => ['synera'],
 		'content'    => synera_pattern_section(synera_pattern_pole(
 			'exemple',
@@ -323,7 +323,7 @@ function synera_register_patterns(): void {
 	]);
 
 	register_block_pattern('synera/sectors-list', [
-		'title'      => 'Synera — Liste de secteurs (badges)',
+		'title'      => 'Synera : Liste de secteurs (badges)',
 		'categories' => ['synera'],
 		'content'    => synera_pattern_section(synera_pattern_sectors_list([
 			['icon' => 'chart-line', 'title' => 'Finance'],
@@ -332,13 +332,13 @@ function synera_register_patterns(): void {
 	]);
 
 	register_block_pattern('synera/value-item', [
-		'title'      => 'Synera — Valeur (icône + texte)',
+		'title'      => 'Synera : Valeur (icône + texte)',
 		'categories' => ['synera'],
 		'content'    => synera_pattern_value_item('shield-check', 'Titre de la valeur', 'Description de la valeur en une ou deux phrases.'),
 	]);
 
 	register_block_pattern('synera/team-member', [
-		'title'      => 'Synera — Membre de l\'équipe',
+		'title'      => 'Synera : Membre de l\'équipe',
 		'categories' => ['synera'],
 		'content'    => synera_pattern_team_member('PN', 'Prénom Nom', 'Fonction', 'Courte biographie professionnelle.'),
 	]);

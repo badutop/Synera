@@ -9,9 +9,9 @@ $year      = date('Y');
 			<div>
 				<?php get_template_part('template-parts/logo', null, ['size' => 'md']); ?>
 				<p class="mt-4 max-w-xs text-sm text-ink-400">
-					SYNERA Group est une société d'intermédiation, d'études et d'accompagnement de projets qui connecte entreprises, investisseurs et institutions aux bons marchés.
+					<strong>SYNERA Groupe</strong> est une société d'intermédiation, d'études et d'accompagnement de projets qui connecte entreprises, investisseurs et institutions aux bons marchés.
 				</p>
-				<a href="#" class="mt-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink-100 text-ink-700 hover:text-primary dark:border-white/10 dark:text-white" aria-label="LinkedIn SYNERA Group">
+				<a href="#" class="mt-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink-100 text-ink-700 hover:text-primary dark:border-white/10 dark:text-white" aria-label="LinkedIn SYNERA Groupe">
 					<?php synera_icon('linkedin', 'h-4 w-4'); ?>
 				</a>
 			</div>
@@ -39,7 +39,7 @@ $year      = date('Y');
 				<ul class="mt-4 space-y-3 text-sm text-ink-400">
 					<li class="flex items-start gap-2">
 						<?php synera_icon('map-pin', 'h-4 w-4 mt-0.5 shrink-0 text-primary'); ?>
-						<span>6, Cité COMICO - VDN, Dakar, Sénégal (siège social)</span>
+						<span>6, Cité COMICO, VDN, Dakar, Sénégal (siège social)</span>
 					</li>
 					<li class="flex items-center gap-2">
 						<?php synera_icon('mail', 'h-4 w-4 shrink-0 text-primary'); ?>
@@ -66,7 +66,7 @@ $year      = date('Y');
 		</div>
 
 		<div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-ink-100 pt-6 text-xs text-ink-400 dark:border-white/10 sm:flex-row">
-			<p>© <?php echo esc_html($year); ?> SYNERA Group. Tous droits réservés. — Réalisé par SmarTek</p>
+			<p>© <?php echo esc_html($year); ?> SYNERA Groupe. Tous droits réservés. Réalisé par SmarTek.</p>
 			<div class="flex gap-4">
 				<a href="<?php echo esc_url(home_url('/mentions-legales/')); ?>" class="hover:text-primary">Mentions légales</a>
 				<a href="<?php echo esc_url(home_url('/politique-confidentialite/')); ?>" class="hover:text-primary">Politique de confidentialité</a>

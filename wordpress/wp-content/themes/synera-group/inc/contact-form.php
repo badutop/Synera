@@ -32,7 +32,7 @@ function synera_handle_contact_form(): void {
 	}
 
 	$to      = get_option('admin_email');
-	$subject_line = sprintf('[Site web] %s — %s', $subject, $name);
+	$subject_line = sprintf('[Site web] %s : %s', $subject, $name);
 	$body    = "Nom : {$name}\nEmail : {$email}\nSociété : " . ($company ?: '-') . "\nSujet : {$subject}\n\nMessage :\n{$message}";
 	$headers = ['Reply-To: ' . $email];
 

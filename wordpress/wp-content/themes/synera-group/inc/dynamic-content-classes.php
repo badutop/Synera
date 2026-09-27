@@ -52,5 +52,6 @@ if (false) :
 	<a class="text-ink-400 hover:text-primary"></a>
 	<h1 class="mt-2 font-display text-4xl font-bold text-ink-900 dark:text-white"></h1>
 	<p class="mt-4 text-sm text-ink-400"></p>
+	<div class="pt-14 sm:pt-20 pb-6 sm:pb-8 py-10 sm:py-14"></div>
 	<?php
 endif;

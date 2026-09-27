@@ -11,7 +11,6 @@ function synera_poles(): array {
 		['slug' => 'intermediation', 'title' => "Intermédiation d'Affaires"],
 		['slug' => 'etudes-conseil', 'title' => 'Études & Conseil'],
 		['slug' => 'accompagnement-projets', 'title' => 'Accompagnement de Projets'],
-		['slug' => 'competences-rh', 'title' => 'Développement des Compétences & RH'],
 	];
 }
 
