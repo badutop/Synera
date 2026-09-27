@@ -42,6 +42,9 @@ function synera_email_shell(string $preheader, string $title, string $body_html,
 	</tr>
 	<tr>
 		<td style="background-color:#F7F5FA;padding:24px 40px;">
+			<p style="margin:0 0 12px;font-size:12px;line-height:18px;color:#6B6475;font-family:Arial,Helvetica,sans-serif;">
+				Ceci est un message automatique, merci de ne pas y répondre directement.
+			</p>
 			<p style="margin:0;font-size:12px;line-height:20px;color:#6B6475;font-family:Arial,Helvetica,sans-serif;">
 				SYNERA Groupe &middot; 6, Cité COMICO, VDN, Dakar, Sénégal<br>
 				<a href="' . esc_url($site_url) . '" style="color:#7030A0;text-decoration:none;">synera-groupe.com</a> &middot; <a href="mailto:synera@synera-groupe.com" style="color:#7030A0;text-decoration:none;">synera@synera-groupe.com</a>
