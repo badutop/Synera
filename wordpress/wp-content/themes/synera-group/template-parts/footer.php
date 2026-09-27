@@ -53,6 +53,8 @@ $year      = date('Y');
 			</div>
 		</div>
 
+		<?php // Newsletter signup suspended for now, kept in place to re-enable later. ?>
+		<?php if (false) : ?>
 		<div class="mt-12 grid gap-4 rounded-2xl border border-ink-100 bg-white p-6 dark:border-white/10 dark:bg-white/[0.03] sm:grid-cols-[1.4fr_1fr] sm:items-center">
 			<div>
 				<h3 class="font-display text-base font-semibold text-ink-900 dark:text-white">Restez informés</h3>
@@ -65,6 +67,7 @@ $year      = date('Y');
 			</form>
 			<p data-newsletter-status hidden>Une erreur est survenue. Merci de réessayer.</p>
 		</div>
+		<?php endif; ?>
 
 		<div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-ink-100 pt-6 text-xs text-ink-400 dark:border-white/10 sm:flex-row">
 			<p>© <?php echo esc_html($year); ?> SYNERA Groupe. Tous droits réservés. Réalisé par SmarTek.</p>
