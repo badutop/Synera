@@ -46,3 +46,27 @@ function synera_handle_contact_form(): void {
 }
 add_action('wp_ajax_synera_contact', 'synera_handle_contact_form');
 add_action('wp_ajax_nopriv_synera_contact', 'synera_handle_contact_form');
+
+function synera_handle_newsletter_signup(): void {
+	check_ajax_referer('synera_newsletter', 'nonce');
+
+	$email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
+
+	if (!is_email($email)) {
+		wp_send_json_error(['errors' => ['email' => 'invalid_email']], 400);
+	}
+
+	$to      = get_option('admin_email');
+	$subject = 'Nouvelle inscription newsletter';
+	$body    = "Nouvelle inscription à la newsletter du site.\nEmail : {$email}";
+
+	$sent = wp_mail($to, $subject, $body);
+
+	if (!$sent) {
+		wp_send_json_error(['errors' => ['general' => 'send_failed']], 502);
+	}
+
+	wp_send_json_success();
+}
+add_action('wp_ajax_synera_newsletter', 'synera_handle_newsletter_signup');
+add_action('wp_ajax_nopriv_synera_newsletter', 'synera_handle_newsletter_signup');

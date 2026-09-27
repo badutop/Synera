@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-define('SYNERA_VERSION', '1.0.1');
+define('SYNERA_VERSION', '1.0.2');
 
 require get_theme_file_path('inc/icons.php');
 require get_theme_file_path('inc/data.php');
@@ -53,3 +53,40 @@ function synera_document_title_separator(): string {
 	return ':';
 }
 add_filter('document_title_separator', 'synera_document_title_separator');
+
+/**
+ * Send mail via an authenticated SMTP account instead of PHP's local mail(),
+ * which fails SPF checks (the shared hosting's outbound IP isn't covered by
+ * the domain's SPF record, only the domain's real mail servers are).
+ * Credentials come from constants defined in wp-config.php (never committed).
+ *
+ * The `wp_mail_from`/`wp_mail_from_name` filters run before WordPress calls
+ * PHPMailer::setFrom(), which validates the address immediately and throws
+ * if it's malformed (e.g. "wordpress@localhost" on a misconfigured site URL)
+ * — that throw happens before `phpmailer_init` fires, so the SMTP override
+ * below would never even run. Setting a valid From this way guarantees
+ * setFrom() always receives something valid.
+ */
+function synera_mail_from(): string {
+	return defined('SYNERA_SMTP_USER') ? SYNERA_SMTP_USER : 'wordpress@synera-groupe.com';
+}
+add_filter('wp_mail_from', 'synera_mail_from');
+
+function synera_mail_from_name(): string {
+	return 'SYNERA Groupe';
+}
+add_filter('wp_mail_from_name', 'synera_mail_from_name');
+
+function synera_phpmailer_smtp(PHPMailer\PHPMailer\PHPMailer $phpmailer): void {
+	if (!defined('SYNERA_SMTP_USER') || !defined('SYNERA_SMTP_PASS')) {
+		return;
+	}
+	$phpmailer->isSMTP();
+	$phpmailer->Host       = defined('SYNERA_SMTP_HOST') ? SYNERA_SMTP_HOST : 'smtp.mail.ovh.ca';
+	$phpmailer->Port       = defined('SYNERA_SMTP_PORT') ? SYNERA_SMTP_PORT : 465;
+	$phpmailer->SMTPSecure = 'ssl';
+	$phpmailer->SMTPAuth   = true;
+	$phpmailer->Username   = SYNERA_SMTP_USER;
+	$phpmailer->Password   = SYNERA_SMTP_PASS;
+}
+add_action('phpmailer_init', 'synera_phpmailer_smtp');

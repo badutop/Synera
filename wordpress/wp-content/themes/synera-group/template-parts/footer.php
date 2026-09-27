@@ -43,7 +43,7 @@ $year      = date('Y');
 					</li>
 					<li class="flex items-center gap-2">
 						<?php synera_icon('mail', 'h-4 w-4 shrink-0 text-primary'); ?>
-						<a href="mailto:contact@synera-group.com" class="hover:text-primary">contact@synera-group.com</a>
+						<a href="mailto:synera@synera-groupe.com" class="hover:text-primary">synera@synera-groupe.com</a>
 					</li>
 					<li class="flex items-center gap-2">
 						<?php synera_icon('phone', 'h-4 w-4 shrink-0 text-primary'); ?>
@@ -58,11 +58,12 @@ $year      = date('Y');
 				<h3 class="font-display text-base font-semibold text-ink-900 dark:text-white">Restez informés</h3>
 				<p class="mt-1 text-sm text-ink-400">Recevez nos analyses de marché et actualités, une fois par mois maximum.</p>
 			</div>
-			<form id="newsletter-form" class="flex flex-col gap-2 sm:flex-row">
+			<form id="newsletter-form" data-ajax-url="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('synera_newsletter')); ?>" class="flex flex-col gap-2 sm:flex-row">
 				<label for="newsletter-email" class="sr-only">Votre adresse email</label>
-				<input id="newsletter-email" type="email" required placeholder="Votre adresse email" class="w-full rounded-full border border-ink-100 bg-transparent px-4 py-2.5 text-sm dark:border-white/10" />
+				<input id="newsletter-email" name="email" type="email" required placeholder="Votre adresse email" class="w-full rounded-full border border-ink-100 bg-transparent px-4 py-2.5 text-sm dark:border-white/10" />
 				<button type="submit" class="shrink-0 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-600">S'inscrire</button>
 			</form>
+			<p data-newsletter-status hidden>Une erreur est survenue. Merci de réessayer.</p>
 		</div>
 
 		<div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-ink-100 pt-6 text-xs text-ink-400 dark:border-white/10 sm:flex-row">

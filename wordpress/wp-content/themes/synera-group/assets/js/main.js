@@ -115,14 +115,42 @@
 		});
 	}
 
-	// Newsletter (front-end only demo)
+	// Newsletter
 	var newsletterForm = document.getElementById('newsletter-form');
 	if (newsletterForm) {
 		newsletterForm.addEventListener('submit', function (e) {
 			e.preventDefault();
 			var input = newsletterForm.querySelector('input');
-			input.value = '';
-			input.placeholder = 'Merci, vous êtes inscrit·e.';
+			var submitBtn = newsletterForm.querySelector('button[type="submit"]');
+			var status = newsletterForm.parentElement.querySelector('[data-newsletter-status]');
+			var formData = new FormData(newsletterForm);
+			formData.append('action', 'synera_newsletter');
+			formData.append('nonce', newsletterForm.dataset.nonce);
+
+			submitBtn.disabled = true;
+			if (status) status.hidden = true;
+
+			fetch(newsletterForm.dataset.ajaxUrl, { method: 'POST', body: formData })
+				.then(function (res) {
+					return res.json();
+				})
+				.then(function (json) {
+					submitBtn.disabled = false;
+					if (json.success) {
+						input.value = '';
+						input.placeholder = 'Merci, vous êtes inscrit·e.';
+					} else if (status) {
+						status.hidden = false;
+						status.setAttribute('data-state', 'error');
+					}
+				})
+				.catch(function () {
+					submitBtn.disabled = false;
+					if (status) {
+						status.hidden = false;
+						status.setAttribute('data-state', 'error');
+					}
+				});
 		});
 	}
 })();
