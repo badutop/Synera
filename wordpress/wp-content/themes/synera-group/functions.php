@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-define('SYNERA_VERSION', '1.0.2');
+define('SYNERA_VERSION', '1.0.3');
 
 require get_theme_file_path('inc/icons.php');
 require get_theme_file_path('inc/data.php');

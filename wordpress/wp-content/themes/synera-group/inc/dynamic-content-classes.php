@@ -53,5 +53,10 @@ if (false) :
 	<h1 class="mt-2 font-display text-4xl font-bold text-ink-900 dark:text-white"></h1>
 	<p class="mt-4 text-sm text-ink-400"></p>
 	<div class="pt-14 sm:pt-20 pb-6 sm:pb-8 py-10 sm:py-14"></div>
+	<div class="absolute top-20 right-4 z-10 rounded-2xl bg-white p-3 shadow-card dark:bg-ink-800 sm:top-auto sm:bottom-6 sm:right-8 sm:p-5"></div>
+	<p class="font-display text-xl font-bold text-primary sm:text-3xl"></p>
+	<p class="max-w-[6rem] text-xs text-ink-400 sm:max-w-[10rem] sm:text-sm"></p>
+	<div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4"></div>
+	<div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-6"></div>
 	<?php
 endif;
