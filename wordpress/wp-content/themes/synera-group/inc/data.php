@@ -16,6 +16,7 @@ function synera_poles(): array {
 
 function synera_nav_links(): array {
 	return [
+		['label' => 'Accueil', 'href' => '/'],
 		['label' => 'Notre Identité', 'href' => '/identite/'],
 		['label' => 'Nos Solutions', 'href' => '/solutions/'],
 		['label' => 'Notre Approche', 'href' => '/approche/'],
